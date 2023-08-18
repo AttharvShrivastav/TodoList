@@ -13,27 +13,30 @@ const Main = () =>{
         SetTask(e.target.value)
     }
 
-    const ChangeTask=(updatedtask, index)=>{
-        console.log(updatedtask + ' ' + index )
-        var key = Number(index);
-        data[key] = updatedtask;
-        
-        console.log(data)
-        
+    const ChangeTask=(updatedData)=>{
+        SetData((data)=>{
+            return [...updatedData]
+            })
+    
     }
 
     const HandleSubmit = () =>{
+
+        if(task !=''){
+
         SetData((data)=>{
         return [...data,task]
         })
 
         console.log(data);
         SetTask("")
+        }
+
     }
 
     const setdata=(task,key)=>{
         return(
-            <Task title = {task} id = {key} updat = {ChangeTask}/>
+            <Task title = {task} id = {key} data = {data} func = {ChangeTask}/>
         )        
     }
 
@@ -42,7 +45,7 @@ const Main = () =>{
         
         <>
             <div className="main">
-                <h1>TO-DO LIST</h1>
+                <h1>To-Do List</h1>
                 <div className="form">
                     <input onChange={HandleChange} className="inputfield" type="text" value= {task} name="" />
                     <button onClick={HandleSubmit} className='btn-style' type='submit'><FontAwesomeIcon className='Edit' icon={faPlus} size='s'/></button>

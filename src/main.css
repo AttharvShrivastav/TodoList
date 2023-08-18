@@ -1,3 +1,12 @@
+.App{
+    background-color: #272829;
+    height: 100vh;
+    font-family: 'Courier Prime', monospace;
+    color: whitesmoke;
+}
+
+
+
 .main{
     display: flex;
     height: auto;
@@ -17,30 +26,51 @@
 .inputfield{
     height: 36px;
     width: 40%;
-    border: 1px black solid;
+    border: 1px #272829 solid;
+    margin: 4px;
+    border-radius: 10px;
+    background-color: whitesmoke;
     font-size: 18px;
-
 }
+
+.inputfield[type = text], select{
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
 
 .btn-style{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    background-color: tomato;
-    border: 1px black solid;
-    font-size: 24px;
-    color: black;
-    padding: 5px;
+    background-color: #4CAF50; /* Green */
+    border: 1px solid #272829;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+
 
 .btn-style:hover{
-    background-color: white;
-    color: tomato;
-    border: 1px tomato solid;
+    background-color: whitesmoke;
+    border: 1px solid #4CAF50;
+    border-radius: 10px;
+    color: #4CAF50;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
     transition-duration: 0.5s;
-    font-size: 24px;
 }
-
 
 
 
